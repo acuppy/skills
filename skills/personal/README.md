@@ -8,3 +8,4 @@ Skills tied to my own setup, not promoted in the plugin.
 - **[obsidian-vault](./obsidian-vault/SKILL.md)** — Search, create, and manage notes in an Obsidian vault with wikilinks and index notes.
 - **[recap](./recap/SKILL.md)** — Deliver a concise re-entry briefing scoped to the current project and conversation.
 - **[session-title](./session-title/SKILL.md)** — Recommend a short list of titles for the current session, derived from what the conversation is actually about.
+- **[to-skill](./to-skill/SKILL.md)** — Distill the current session into a reusable skill by extracting its repeatable core.
