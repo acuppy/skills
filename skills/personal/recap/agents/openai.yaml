@@ -1,0 +1,3 @@
+interface:
+  display_name: "Recap"
+  short_description: "Catch up on where the session left off"

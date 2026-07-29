@@ -1,0 +1,3 @@
+interface:
+  display_name: "Brief"
+  short_description: "Compress the last answer to essentials"
