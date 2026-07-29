@@ -12,6 +12,11 @@
 
 [![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills)
 
+> **Adam Cuppy's fork of [mattpocock/skills](https://github.com/mattpocock/skills).**
+> The `engineering/` and `productivity/` skills are Matt's work, tracked
+> against upstream. My own live in [`skills/personal/`](./skills/personal/).
+> The rest of this README is Matt's, in his voice.
+
 My agent skills that I use every day to do real engineering - not vibe coding.
 
 Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve.
