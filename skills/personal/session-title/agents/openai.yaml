@@ -1,0 +1,3 @@
+interface:
+  display_name: "Session Title"
+  short_description: "Suggest a title for this session"
