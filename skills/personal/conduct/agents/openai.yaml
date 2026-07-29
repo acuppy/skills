@@ -1,0 +1,3 @@
+interface:
+  display_name: "Conduct"
+  short_description: "Orchestrate a prompt across model tiers"
