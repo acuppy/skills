@@ -41,16 +41,28 @@ Footer: posts read, tickets read, sources used, and releases shipped (REL ticket
 
 **LIMITS** — Read-only: read only #check-in, and Asana through the wrapper. Post only to #digest. Do not create or change any ticket. Never print a token or key.
 
-## FORMAT (Slack blocks ground truth)
+## FORMAT (Adam's approved layout, set 2026-10-26)
 
-Slack's client drops the newlines between adjacent `rich_text_list` elements and between multiple `rich_text_section`s, so those layouts render as one run-on paragraph. The Oct 24 digest that renders correctly uses **one `rich_text` block containing one `rich_text_section`**, with every line break written as an explicit `"\n"` text run. Never use `rich_text_list` and never use more than one section.
+**Skeleton (render-critical, do not change):** ONE `rich_text` block containing ONE `rich_text_section`, every line break as an explicit `"\n"` text run. Never use `rich_text_list` elements and never more than one section — Slack's client drops the newlines between adjacent list/section elements and the message renders as one run-on paragraph.
 
-Write the runs in this order:
-1. Title (bold) → `"\n"` → window line (italic).
-2. For each item: `"\n\nN. "` → bold label (e.g. "Flags — credentials:") → plain detail (fact, owner, age, "(Name, Mon DD)") → optional link run.
-3. `"\n\n"` → italic footer.
+**Layout (content structure):**
+```
+CPTO digest: <weekday> <Mon DD>                    (bold)
+Window read: <start> → <end> PT.                   (italic)
 
-Number items 1., 2., 3. … across all sections, up to 10. Labels can repeat; for example, each wait older than 3 days gets its own numbered "Waits older than 3 days:" item. Post with `chat.postMessage` and pass both `blocks=` JSON and a plain-text `text` fallback. **After posting, check the message:** the block's elements must equal `['rich_text_section']`, and at least one text run must start with `"\n\n"`.
+Flags                                              (bold header)
+• ID-XXXX: <message> (Name, Mon DD) <link>
+• <message without identifier> (Name, Mon DD)
+
+Waiting on you                                     (bold header)
+• <same bullet format>
+
+Waits older than 3 days / Dates at risk (next 14 days) / Releases / Quiet tracks
+• ...
+```
+Run sequence per line: bold header run → `"\n"` run → each item as `"• ID-XXXX: <message> (Name, Mon DD) "` (+ optional link run) → `"\n"` run → next item → `"\n\n"` run between sections → italic footer run.
+
+**Item rules:** every update gets its own `• ` bullet; items naming a ticket or PR START with the identifier followed by a colon (`ID-8117: ...`, `PR 9919: ...`, `REL-452: ...`, `central 1127: ...`); items without an identifier start directly with the message. ≤10 bullets total across sections. Empty section = header + "• None." Post with `chat.postMessage` (`blocks=` JSON + plain-text `text` fallback). **After posting, verify:** block elements == `['rich_text_section']` and ≥1 run starts with `"\n"`.
 
 ## Thread interaction loop
 
