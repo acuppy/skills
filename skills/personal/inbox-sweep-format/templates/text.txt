@@ -1,0 +1,14 @@
+INBOX SWEEP · $run_line
+$stats_line
+
+TO DO
+$todo
+
+ALREADY HANDLED
+$handled
+
+FYI
+$fyi
+
+SWEPT $swept_total: $tally
+$swept_extras
