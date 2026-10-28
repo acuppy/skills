@@ -1,0 +1,81 @@
+{
+  "account": "you@example.com",
+  "generated_at": "2026-10-28T08:56:00-07:00",
+  "timezone_label": "PT",
+  "scanned": 183,
+  "errors": 0,
+  "preheader": "6 to do: TKT-1042 access, Redis maintenance on 3 prod add-ons, mail domain auth. 4 already handled, 42 swept.",
+  "todo": [
+    {
+      "title": "Grant Priya access to “TKT-1042 investigation notes”",
+      "source": "Drive share request",
+      "received_at": "2026-10-21T13:22:53Z",
+      "detail": "Also 3 tracker @mentions on TKT-1042 (Priya, Sam, Jordan)",
+      "thread_id": "18f0000000000001",
+      "link": {"label": "view", "search": "TKT-1042"}
+    },
+    {
+      "title": "Schedule Redis maintenance: 3 prod add-ons",
+      "source": "Heroku",
+      "received_at": ["2026-10-11T12:00:00Z", "2026-10-22T09:00:00Z"],
+      "detail": "api-prod · api-eu-prod · worker-prod",
+      "search": "\"Maintenance required\" Redis"
+    },
+    {
+      "title": "Plan Redis version upgrade: 2 add-ons near end of life",
+      "source": "Heroku",
+      "received_at": "2026-08-20T12:00:00Z",
+      "detail": "api-staging · worker-staging",
+      "search": "Redis \"end of life\""
+    },
+    {
+      "title": "Authenticate sending domain for transactional mail",
+      "source": "Mail provider",
+      "received_at": "2026-10-22T12:04:39Z",
+      "detail": "Required by Google/Yahoo deliverability rules",
+      "thread_id": "18f0000000000002"
+    },
+    {
+      "title": "Review spoofing alert: sender on a sister domain",
+      "source": "Workspace alert",
+      "received_at": "2026-10-22T12:00:00Z",
+      "detail": "Likely a sister domain, so probably a false positive. Worth a 10-second check.",
+      "thread_id": "18f0000000000003"
+    },
+    {
+      "title": "Payroll approval request",
+      "source": "Payroll",
+      "received_at": "2026-10-21T09:00:00Z",
+      "detail": "Was swept as noise; looks like it needs you",
+      "thread_id": "18f0000000000004"
+    }
+  ],
+  "handled": [
+    {"title": "Alex: domain registrar move", "reason": "You sent the access code on Oct 22; ball is with Alex", "thread_id": "18f0000000000005"},
+    {"title": "Remote-support license renewal (11/2)", "reason": "Morgan: cancel all licenses; Casey owns it", "thread_id": "18f0000000000006"},
+    {"title": "CRM sandbox cert expiring", "reason": "Riley: no next steps needed", "thread_id": "18f0000000000007"},
+    {"title": "Release 10/21", "reason": "Release notes, FYI only", "thread_id": "18f0000000000008"}
+  ],
+  "fyi": [
+    {"title": "CRM: PHP CVE advisory", "thread_id": "18f0000000000009"},
+    {"title": "CRM: certificate authority maintenance", "thread_id": "18f000000000000a"},
+    {"title": "Mail provider order", "thread_id": "18f000000000000b"},
+    {"title": "Monitoring vendor newsletter", "thread_id": "18f000000000000c"}
+  ],
+  "swept": {
+    "by_source": [
+      {"name": "Asana", "count": 18},
+      {"name": "Heroku", "count": 7},
+      {"name": "Google Sheets", "count": 5},
+      {"name": "Payroll", "count": 4},
+      {"name": "Compliance", "count": 2},
+      {"name": "Other", "count": 6}
+    ],
+    "possible_misses": [
+      {"title": "Jamie: “Thanks for meeting with me”", "thread_id": "18f000000000000d"}
+    ],
+    "unsure": [
+      {"title": "Taylor: “Re: Hi!!!!”", "thread_id": "18f000000000000e"}
+    ]
+  }
+}
