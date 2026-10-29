@@ -1,0 +1,3 @@
+interface:
+  display_name: "Inbox Sweep Format"
+  short_description: "Render the inbox sweep email from JSON with fixed templates"
